@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona SYSTEM "persona.dtd">
+
+<persona id="p1">
+    <nombre>Paula</nombre>
+    <apellido>Pelegri</apellido>
+    <edad>8</edad>
+    <telefono>694856923</telefono>
+</persona>

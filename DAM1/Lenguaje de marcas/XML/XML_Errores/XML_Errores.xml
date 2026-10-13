@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE parque SYSTEM "XML_Errores.dtd">
+<parque nombre="Aventura Feliz" ciudad="Madrid" apertura="1998-06-15">
+
+  <zonas>
+    <zona id="z_aventura" nombre="Zona Aventura" tematica="selva" estado="abierta">
+      <descripcion>Área con atracciones fuertes y tematización tropical.</descripcion>
+
+      <atraccionRef>a_001</atraccionRef>
+      <atraccionRef>a_002</atraccionRef>
+
+      <restauranteRef>r_001</restauranteRef>
+
+      <empleadoRef>e_001</empleadoRef>
+      <empleadoRef>e_002</empleadoRef>
+    </zona>
+
+    <zona id="z_fantasia" nombre="Zona Fantasía" tematica="cuento" estado="abierta">
+      <descripcion>Zona familiar con personajes, música y colores.</descripcion>
+
+      <atraccionRef>a_003</atraccionRef>
+      <atraccionRef>a_004</atraccionRef>
+
+      <restauranteRef>r_002</restauranteRef>
+
+      <empleadoRef>e_003</empleadoRef>
+    </zona>
+
+    <zona id="z_agua" nombre="Zona Agua" tematica="océano" estado="mantenimiento">
+      <descripcion>Zona de agua con toboganes y espectáculos marinos.</descripcion>
+
+      <atraccionRef>a_005</atraccionRef>
+      <atraccionRef>a_006</atraccionRef>
+
+      <restauranteRef>r_003</restauranteRef>
+      
+      <empleadoRef>e_004</empleadoRef>
+      <empleadoRef>e_005</empleadoRef>
+    </zona>
+
+    <zona id="z_terror" nombre="Zona Terror" tematica="horror" estado="cerradísima">
+      <descripcion>Espacios oscuros, sustos y ambientación nocturna.</descripcion>
+
+      <atraccionRef>a_007</atraccionRef>
+      <atraccionRef>a_008</atraccionRef>
+
+      <restauranteRef>r_004</restauranteRef>
+
+      <empleadoRef>e_006</empleadoRef>
+    </zona>
+
+    <zona id="z_futuro" nombre="Zona Futuro" tematica="robots" estado="abierta">
+      <descripcion>Experiencias futuristas y simuladores avanzados.</descripcion>
+
+      <atraccionRef>a_009</atraccionRef>
+
+      <restauranteRef>r_005</restauranteRef>
+
+      <empleadoRef>e_007</empleadoRef>
+    </zona>
+
+    <zona id="z_infantil" nombre="Zona Infantil" tematica="juguetes" estado="abierta">
+      <descripcion>Espacio para niños pequeños con atracciones suaves.</descripcion>
+
+      <atraccionRef>a_010</atraccionRef>
+      <atraccionRef>a_011</atraccionRef>
+
+      <restauranteRef>r_006</restauranteRef>
+      
+      <empleadoRef>e_008</empleadoRef>
+      <empleadoRef>e_009</empleadoRef>
+    </zona>
+
+    <zona id="z_oeste" nombre="Zona Oeste" tematica="western" estado="cerrada">
+      <descripcion>Pueblo vaquero con tren y duelos teatrales.</descripcion>
+
+      <atraccionRef>a_012</atraccionRef>
+
+      <restauranteRef>r_007</restauranteRef>
+
+      <empleadoRef>e_010</empleadoRef>
+    </zona>
+  </zonas> 
+
+  <atracciones>
+
+    <atraccion id="a_001" zona="z_aventura" intensidad="alta">
+      <nombre>Montaña Rápida</nombre>
+      <tipo>montaña rusa</tipo>
+      <alturaMinima>140</alturaMinima>
+      <capacidad>24</capacidad>
+      <estado>operativa</estado>
+      <tiempoEspera>35</tiempoEspera>
+      <premios>
+        <premio>Experiencia extrema</premio>
+      </premios>
+
+    </atraccion>
+
+    <atraccion id="a_002" zona="z_aventura" intensidad="extrema">
+      <nombre>Torre del Vértigo</nombre>
+      <tipo>caída libre</tipo>
+      <alturaMinima>145</alturaMinima>
+      <capacidad>16</capacidad>
+      <estado>operativa</estado>
+      <tiempoEspera>50</tiempoEspera>
+    </atraccion>
+
+    <atraccion id="a_003" zona="z_fantasia" intensidad="baja">
+      <nombre>Carrusel Mágico</nombre>
+      <tipo>carrusel</tipo>
+      <alturaMinima>90</alturaMinima>
+      <capacidad>40</capacidad>
+      <estado>operativa</estado>
+      <tiempoEspera>10</tiempoEspera>
+    </atraccion>
+
+    <atraccion id="a_004" zona="z_fantasia" intensidad="media">
+      <nombre>Vuelo del Dragón</nombre>
+      <tipo>tren aéreo</tipo>
+      <alturaMinima>120</alturaMinima>
+      <capacidad>20</capacidad>
+      <estado>revisión</estado>
+      <tiempoEspera>20</tiempoEspera>
+      <premios>
+        <premio>Favorita familiar</premio>
+        <premio>Mejor tematización 2024</premio>
+      </premios>
+    </atraccion>
+    
+    <atraccion id="a_005" zona="z_agua" intensidad="alta">
+      <nombre>Río Salvaje</nombre>
+      <tipo>rápidos</tipo>
+      <alturaMinima>130</alturaMinima>
+      <capacidad>12</capacidad>
+      <estado>mantenimiento</estado>
+      <tiempoEspera>0</tiempoEspera>
+    </atraccion>
+
+    <atraccion id="a_006" zona="z_agua" intensidad="media">
+      <nombre>Tsunami Splash</nombre>       <tipo>barca</tipo>
+      <alturaMinima>125</alturaMinima>
+      <capacidad>18</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>28</tiempoEspera>     </atraccion>
+    <atraccion id="a_007" zona="z_terror" intensidad="alta">
+      <nombre>Casa Maldita</nombre>       <tipo>pasaje del terror</tipo>
+      <alturaMinima>110</alturaMinima>
+      <capacidad>30</capacidad>       <estado>cerrada</estado>
+      <tiempoEspera>5</tiempoEspera>     </atraccion>
+    <atraccion id="a_008" zona="z_terror" intensidad="ultra">
+      <nombre>Labertinto Oscuro</nombre>
+      <tipo>maze</tipo>       <alturaMinima>115</alturaMinima>
+      <capacidad>22</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>18</tiempoEspera>     </atraccion>
+    <atraccion id="a_009" zona="z_futuro" intensidad="media">
+      <nombre>Simulador Galáctico</nombre>
+      <tipo>simulador</tipo>       <alturaMinima>130</alturaMinima>
+      <capacidad>50</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>40</tiempoEspera>     </atraccion>
+    <atraccion id="a_010" zona="z_infantil" intensidad="baja">
+      <nombre>Tazas Giratorias</nombre>
+      <tipo>tazas</tipo>       <alturaMinima>80</alturaMinima>
+      <capacidad>25</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>12</tiempoEspera>     </atraccion>
+    <atraccion id="a_011" zona="z_infantil" intensidad="baja">
+      <nombre>Mini Tren</nombre>       <tipo>tren</tipo>       <alturaMinima>70</alturaMinima>
+      <capacidad>30</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>8</tiempoEspera>     </atraccion>
+    <atraccion id="a_012" zona="z_oeste" intensidad="media">
+      <nombre>Tren Minero</nombre>       <tipo>montaña rusa familiar</tipo>
+      <alturaMinima>120</alturaMinima>
+      <capacidad>28</capacidad>       <estado>cerrada</estado>
+      <tiempoEspera>0</tiempoEspera>     </atraccion>
+    <atraccion id="a_013" zona="z_oeste" intensidad="alta">
+      <nombre>Duelo Mecánico</nombre>       <tipo>shooting ride</tipo>
+      <alturaMinima>110</alturaMinima>
+      <capacidad>20</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>16</tiempoEspera>     </atraccion>
+    <atraccion id="a_013" zona="z_infantil" intensidad="baja">
+      <nombre>Barquitos</nombre>       <tipo>agua</tipo>       <alturaMinima>75</alturaMinima>
+      <capacidad>10</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>14</tiempoEspera>     </atraccion>
+    <atraccion id="a_014" zona="z_infantil" intensidad="media">
+      <nombre>Cohete Loco & sorpresa</nombre>
+      <tipo>spin</tipo>       <alturaMinima>100</alturaMinima>
+      <capacidad>18</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>19</tiempoEspera>     </atraccion>
+    <atraccion id="a_015" zona="z_aventura" intensidad="alta">
+      <nombre>Aventura Perdida</nombre>
+      <tipo>jeep ride</tipo>       <alturaMinima>110</alturaMinima>
+      <capacidad>32</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>33</tiempoEspera>       <premios>
+        <premio>Top 10 del parque</premio>
+      </premios>     </atraccion>     <atraccion id="a_016" zona="z_oeste">
+      <nombre>Caballos del Oeste</nombre>
+      <tipo>familiar</tipo>       <alturaMinima>85</alturaMinima>
+      <capacidad>15</capacidad>       <estado>operativa</estado>
+      <tiempoEspera>11</tiempoEspera>     </atraccion>   </atracciones>   <visitantes>
+    <visitante id="v_001" vip="si" grupo="familia_rojas">
+      <nombre>Lucía Rojas</nombre>       <edad>34</edad>
+      <entradaAsignada>en_001</entradaAsignada>
+      <atraccionesFavoritas>         <favorita>a_003</favorita>
+        <favorita>a_004</favorita>       </atraccionesFavoritas>       <acompanantes>
+        <acompanante>Mario Rojas</acompanante>
+        <acompanante>Paula Rojas</acompanante>       </acompanantes>     </visitante>
+    <visitante id="v_002" vip="no" grupo="colegio_1ESO">
+      <nombre>Daniel Pérez</nombre>       <edad>13</edad>
+      <entradaAsignada>en_002</entradaAsignada>
+      <atraccionesFavoritas>         <favorita>a_010</favorita>
+        <favorita>a_011</favorita>       </atraccionesFavoritas>     </visitante>
+    <visitante id="v_003" vip="no">       <nombre>Marina Soler</nombre>       <edad>27</edad>
+      <entradaAsignada>en_003</entradaAsignada>
+    </visitante>     <visitante id="v_004" vip="talvez">
+      <nombre>Álvaro Núñez</nombre>       <edad>29</edad>
+      <entradaAsignada>en_004</entradaAsignada>
+    </visitante>     <visitante id="v_005" vip="si">
+      <nombre>Eva Torres</nombre>       <edad>31</edad>
+      <entradaAsignada>en_005</entradaAsignada>
+      <atraccionesFavoritas>         <favorita>a_001</favorita>
+      </atraccionesFavoritas>       <acompanantes>
+        <acompanante>Iván Torres</acompanante>       </acompanantes>     </visitante>
+    <visitante id="v_006" vip="no" grupo="empresa_tecno">
+      <nombre>Grupo Tech</nombre>       <edad>cuarenta</edad>
+      <entradaAsignada>en_006</entradaAsignada>
+    </visitante>     <visitante id="v_007" vip="no">
+      <nombre>Rosa Vidal</nombre>       <edad>22</edad>
+      <entradaAsignada></entradaAsignada>
+    </visitante>     <visitante id="v_008" vip="no">
+      <nombre>Pepe & Ana</nombre>       <edad>44</edad>
+      <entradaAsignada>en_008</entradaAsignada>
+    </visitante>     <visitante id="v_009" vip="si">
+      <nombre>Sara Gil</nombre>       <edad>17</edad>
+      <entradaAsignada>en_009</entradaAsignada>
+      <atraccionesFavoritas>         <favorita>a_001</favorita>
+        <favorita>a_002</favorita>         <favorita>a_999</favorita>
+      </atraccionesFavoritas>     </visitante>     <visitante id="v_010" vip="no">
+      <nombre>Óscar León</nombre>       <edad>38</edad>
+      <entradaAsignada>en_010</entradaAsignada>
+      <acompanantes>         <acompanante>Leo León</acompanante>
+      </acompanantes>     </visitante>     <visitante id="v_010" vip="no">
+      <nombre>ID Duplicado</nombre>       <edad>40</edad>
+      <entradaAsignada>en_011</entradaAsignada>
+    </visitante>   </visitantes>   <empleados>
+    <empleado id="e_001" contrato="indefinido" antiguedad="8">
+      <nombre>Carlos Ruiz</nombre>       <puesto>operador</puesto>
+      <turno>mañana</turno>       <salario>1650</salario>
+      <zonaAsignada>z_aventura</zonaAsignada>     </empleado>
+    <empleado id="e_002" contrato="temporal" antiguedad="2">
+      <nombre>Laura Mena</nombre>       <puesto>seguridad</puesto>
+      <turno>tarde</turno>       <salario>1500</salario>
+      <zonaAsignada>z_aventura</zonaAsignada>     </empleado>
+    <empleado id="e_003" contrato="practicas" antiguedad="0">
+      <nombre>Iván Soto</nombre>       <puesto>animación</puesto>
+      <turno>mañana</turno>       <salario>700</salario>
+      <zonaAsignada>z_fantasia</zonaAsignada>     </empleado>
+    <empleado id="e_004" contrato="indefinido" antiguedad="5">
+      <nombre>Patricia Lobo</nombre>       <puesto>socorrista</puesto>
+      <turno>mañana</turno>       <salario>1700</salario>
+      <zonaAsignada>z_agua</zonaAsignada>     </empleado>
+    <empleado id="e_005" contrato="indefinido">
+      <nombre>Sergio Pardo</nombre>       <puesto>mantenimiento</puesto>
+      <turno>noche</turno>       <salario>1850</salario>
+      <zonaAsignada>z_agua</zonaAsignada>     </empleado>
+    <empleado id="e_006" contrato="fijo">       <nombre>Noelia Casas</nombre>
+      <puesto>actriz</puesto>       <turno>tarde</turno>       <salario>1400</salario>
+      <zonaAsignada>z_terror</zonaAsignada>     </empleado>
+    <empleado id="e_007" contrato="temporal" antiguedad="1">
+      <nombre>Mario Vega</nombre>       <puesto>operador</puesto>
+      <turno>partido</turno>       <salario>1600</salario>
+      <zonaAsignada>z_futuro</zonaAsignada>     </empleado>
+    <empleado id="e_008" contrato="indefinido" antiguedad="7">
+      <nombre>Julia Serra</nombre>       <puesto>taquilla</puesto>
+      <turno>mañana</turno>       <salario>1550</salario>
+      <zonaAsignada>z_infantil</zonaAsignada>     </empleado>
+    <empleado id="e_009" contrato="indefinido" antiguedad="3">
+      <nombre>Ángel Mora</nombre>       <puesto>limpieza</puesto>
+      <turno>tarde</turno>       <salario>1450</salario>
+      <zonaAsignada>z_infantil</zonaAsignada>     </empleado>
+    <empleado id="e_010" contrato="temporal" antiguedad="4">
+      <nombre>Clara Nieto</nombre>
+      <puesto>actriz</puesto>       <turno>mañana</turno>       <salario>1420</salario>
+      <zonaAsignada>z_oeste</zonaAsignada>     </empleado>
+    <empleado id="e_011" contrato="temporal" antiguedad="1">
+      <nombre>Empleado sin cerrar</nombre>
+      <puesto>extra</puesto>       <turno>tarde</turno>
+      <salario>1200</salario>       <zonaAsignada>z_oeste</zonaAsignada>
+  </empleados>   <restaurantes>     <restaurante id="r_001" zona="z_aventura" abierto="si">
+      <nombre>Selva Burger</nombre>       <especialidad>hamburguesas</especialidad>
+      <aforo>90</aforo>       <menu>         <producto id="p_001" categoria="comida">
+          <nombre>Hamburguesa Jaguar</nombre>           <precio>12.50</precio>
+          <alergenos>gluten,lactosa</alergenos>         </producto>
+        <producto id="p_002" categoria="bebida">           <nombre>Refresco Tropical</nombre>
+          <precio>3.20</precio>         </producto>       </menu>     </restaurante>
+    <restaurante id="r_002" zona="z_fantasia" abierto="si">
+      <nombre>Dulce Reino</nombre>       <especialidad>postres</especialidad>
+      <aforo>60</aforo>       <menu>         <producto id="p_003" categoria="postre">
+          <nombre>Helado Unicornio</nombre>
+          <precio>5.50</precio>         </producto>       </menu>     </restaurante>
+    <restaurante id="r_003" zona="z_agua" abierto="no">
+      <nombre>Olas & Snacks</nombre>       <especialidad>snacks</especialidad>
+      <aforo>70</aforo>     </restaurante>
+    <restaurante id="r_004" zona="z_terror" abierto="si">
+      <nombre>La Cripta</nombre>       <especialidad>comida temática</especialidad>
+      <aforo>50</aforo>     </restaurante>
+    <restaurante id="r_005" zona="z_futuro" abierto="si">
+      <nombre>Byte Bites</nombre>       <especialidad>comida rápida</especialidad>
+      <aforo>85</aforo>     </restaurante>
+    <restaurante id="r_006" zona="z_infantil" abierto="a veces">
+      <nombre>PequeMenú</nombre>       <especialidad>infantil</especialidad>
+      <aforo>65</aforo>     </restaurante>
+    <restaurante id="r_007" zona="z_oeste" abierto="no">
+      <nombre>Saloon Texas</nombre>       <especialidad>parrilla</especialidad>
+      <aforo>100</aforo>     </restaurante>
+    <restaurante id="r_008" zona="z_desconocida" abierto="si">
+      <nombre>Zona Error</nombre>       <especialidad>ninguna</especialidad>
+      <aforo>20</aforo>     </restaurante>
+  </restaurantes>   <eventos>     <evento id="ev_001" tipo="desfile">
+      <titulo>Desfile de Bienvenida</titulo>
+      <fecha>2026-04-01</fecha>       <hora>12:00</hora>
+      <ubicacion>avenida principal</ubicacion>
+      <aforoMaximo>500</aforoMaximo>     </evento>
+    <evento id="ev_002" tipo="show">       <titulo>Magia en Fantasía</titulo>
+      <fecha>2026-04-01</fecha>       <hora>17:00</hora>
+      <ubicacion>teatro de cuentos</ubicacion>
+      <aforoMaximo>300</aforoMaximo>     </evento>
+    <evento id="ev_003" tipo="concierto">       <titulo>Noches del Oeste</titulo>
+      <fecha>01/04/2026</fecha>       <hora>21:30</hora>
+      <ubicacion>plaza del saloon</ubicacion>
+    </evento>     <evento id="ev_004" tipo="adulto">
+      <titulo>Sustos al Anochecer</titulo>
+      <fecha>2026-04-01</fecha>       <hora>20:00</hora>
+      <ubicacion>zona terror</ubicacion>
+      <aforoMaximo>250</aforoMaximo>     </evento>     <evento id="ev_005">
+      <titulo>Robots en Acción</titulo>
+      <fecha>2026-04-02</fecha>       <hora>18:15</hora>
+      <ubicacion>plaza del futuro</ubicacion>
+      <aforoMaximo>320</aforoMaximo>     </evento>   </eventos>   <entradas>
+    <entrada id="en_001" usada="si" descuento="vip">
+      <tipoEntrada>general</tipoEntrada>       <precio>45</precio>
+      <fechaCompra>2026-03-20</fechaCompra>       <visitanteRef>v_001</visitanteRef>
+    </entrada>     <entrada id="en_002" usada="no">
+      <tipoEntrada>escolar</tipoEntrada>       <precio>22</precio>
+      <fechaCompra>2026-03-28</fechaCompra>       <visitanteRef>v_002</visitanteRef>
+    </entrada>     <entrada id="en_003" usada="no">
+      <tipoEntrada>general</tipoEntrada>       <precio>45</precio>
+      <fechaCompra>2026-03-30</fechaCompra>       <visitanteRef>v_003</visitanteRef>
+    </entrada>     <entrada id="en_004" usada="no">
+      <tipoEntrada>general</tipoEntrada>       <precio>45,50</precio>
+      <fechaCompra>2026-03-30</fechaCompra>       <visitanteRef>v_004</visitanteRef>
+    </entrada>     <entrada id="en_005" usada="si">       <tipoEntrada>premium</tipoEntrada>
+      <precio>75</precio>       <fechaCompra>ayer</fechaCompra>
+      <visitanteRef>v_005</visitanteRef>     </entrada>     <entrada id="en_006" usada="no">
+      <tipoEntrada>empresa</tipoEntrada>       <precio>-5</precio>
+      <fechaCompra>2026-03-15</fechaCompra>
+      <visitanteRef>v_006</visitanteRef>     </entrada>
+    <entrada id="en_007" usada="quizas">
+      <tipoEntrada>general</tipoEntrada>       <precio>45</precio>
+      <fechaCompra>2026-03-15</fechaCompra>       <visitanteRef>v_007</visitanteRef>
+    </entrada>     <entrada id="en_008" usada="no">
+      <tipoEntrada>doble</tipoEntrada>       <precio>80</precio>
+      <fechaCompra>2026-03-10</fechaCompra>       <visitanteRef>v_008</visitanteRef>
+    </entrada>     <entrada id="en_009" usada="si">
+      <tipoEntrada>juvenil</tipoEntrada>       <precio>35</precio>
+      <fechaCompra>2026-03-09</fechaCompra>       <visitanteRef>v_009</visitanteRef>
+    </entrada>     <entrada id="en_010" usada="no">
+      <tipoEntrada>general</tipoEntrada>       <precio>45</precio>
+      <fechaCompra>2026-03-08</fechaCompra>
+      <visitanteRef>v_010</visitanteRef>     </entrada>   </entradas>   <horarios>
+    <horario id="h_001" temporada="alta">
+      <dia>lunes</dia>       <apertura>10:00</apertura>
+      <cierre>22:00</cierre>     </horario>     <horario id="h_002" temporada="alta">
+      <dia>martes</dia>       <apertura>10:00</apertura>
+      <cierre>22:00</cierre>     </horario>     <horario id="h_003" temporada="media">
+      <dia>miércoles</dia>       <apertura>10:30</apertura>
+      <cierre>21:30</cierre>     </horario>     <horario id="h_004" temporada="baja">
+      <dia>jueves</dia>       <apertura>11:00</apertura>
+      <cierre>20:00</cierre>     </horario>     <horario id="h_005" temporada="baja">
+      <dia>viernes</dia>       <apertura>11:00</apertura>
+      <cierre>23:00</cierre>     </horario>     <horario id="h_006" temporada="especial">
+      <dia>sábado</dia>       <apertura>10:00</apertura>
+      <cierre>24:00</cierre>     </horario>     <horario id="h_007" temporada="alta">
+      <dia>domingo</dia>       <apertura>09:60</apertura>
+      <cierre>22:00</cierre>     </horario>   </horarios>   <incidencias>
+    <incidencia id="i_001" resuelta="si">       <fecha>2026-03-01</fecha>
+      <descripcion>Pequeña avería en a_005.</descripcion>
+      <gravedad>baja</gravedad>       <zonaRef>z_agua</zonaRef>     </incidencia>
+    <incidencia id="i_002" resuelta="no">       <fecha>2026-03-02</fecha>
+      <descripcion>Pérdida de objeto en la zona infantil.</descripcion>
+      <gravedad>media</gravedad>       <zonaRef>z_infantil</zonaRef>     </incidencia>
+    <incidencia id="i_003" resuelta="no">       <fecha>2026-03-03</fecha>
+      <descripcion>Parada inesperada de la atracción a_001.</descripcion>
+      <gravedad>alta</gravedad>       <zonaRef>z_aventura</zonaRef>     </incidencia>
+    <incidencia id="i_004" resuelta="no">       <fecha>2026-03-04</fecha>
+      <descripcion>Cola excesiva en restaurante r_001.</descripcion>
+      <gravedad>leve</gravedad>       <zonaRef>z_aventura</zonaRef>     </incidencia>
+    <incidencia id="i_005" resuelta="pendiente">       <fecha>2026-03-05</fecha>
+      <descripcion>Ruido extraño en zona oeste.</descripcion>
+      <gravedad>media</gravedad>       <zonaRef>z_oeste</zonaRef>     </incidencia>
+    <incidencia id="i_006" resuelta="no">       <fecha>2026-03-06</fecha>
+      <descripcion>Mensaje con entidad rara &promo;</descripcion>
+      <gravedad>media</gravedad>       <zonaRef>z_futuro</zonaRef>     </incidencia>
+    <incidencia id="i_007" resuelta="no">       <fecha>2026-03-07</fecha>
+      <descripcion>Texto con símbolo < roto </descripcion>
+      <gravedad>alta</gravedad>       <zonaRef>z_terror</zonaRef>     </incidencia>
+  </incidencias>   <datosSueltos>
+    <nombre>Contenido extra fuera del modelo principal</nombre>
+    <tipo>debug</tipo>     Texto libre suelto.   </datosSueltos>
+  <basura></basura> </parque>

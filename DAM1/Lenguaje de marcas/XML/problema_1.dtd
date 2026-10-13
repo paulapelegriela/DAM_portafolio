@@ -1,0 +1,15 @@
+<!ELEMENT pedidos (pedido+)>
+
+<!ELEMENT pedido (cliente, fecha, productos)>
+<!ATTLIST pedido id ID #REQUIRED>
+
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT productos (producto+)>
+
+<!ELEMENT producto (nombre, cantidad, precio_unitario)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precio_unitario (#PCDATA)>

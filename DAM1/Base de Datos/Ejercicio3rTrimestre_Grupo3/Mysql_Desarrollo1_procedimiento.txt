@@ -1,0 +1,80 @@
+-- crear tabla empleados 
+ create table empleados ( 
+    dni int primary key,
+    letra_dni varchar (1),
+    nombre varchar(20) not null, 
+    apellidos varchar(40) not null
+);
+
+-- crear los registros (sacado del excel)
+insert into empleados values (23456787,null,'Juan','Martín González');
+insert into empleados values (12786412,null,'Pedro','Gómez Solís');
+insert into empleados values (36557791,null,'Ana','García González');
+insert into empleados values (8345786,null,'Mariano','Martín Romero');
+insert into empleados values (36461873,null,'Marta','Sánchez García');
+insert into empleados values (14789436,null,'Ignacio','Castejón García');
+insert into empleados values (45789423,null,'Olga','Lorenzo Silva');
+insert into empleados values (34567854,null,'Pablo','López Solis');
+insert into empleados values (12562354,null,'Felipe','Soler Cardoso');
+insert into empleados values (3456789,null,'Lurdes','Montero Gómez');
+
+
+-- procedimiento para calcular la letra del dni
+drop procedure if exists proc_calcular_letra_nif;
+delimiter $$
+
+create procedure proc_calcular_letra_nif()
+
+begin
+
+declare wdni int;
+declare wnombre varchar(20);
+declare wapellidos varchar(40);
+declare wresto int;
+declare wletra char(1);
+declare wcadena varchar(23) default 'TRWAGMYFPDXBNJZSQVHLCKE'; -- (estas son las letras oficiales del dni encontradas en google)
+declare wfin boolean default false;
+declare wtodo varchar(5000) default ''; 
+
+-- cursor con empleados sin la letra calculada
+declare cursor1 cursor for
+select dni, nombre, apellidos from empleados where letra_dni is null;
+
+-- controlar el final del cursor
+declare continue handler for not found set wfin = true;
+
+-- cabecera del fichero
+set wtodo = '          listado empleados\r          -------------------\r\r';
+
+open cursor1;
+
+-- leer el primer registro
+fetch cursor1 into wdni, wnombre, wapellidos;
+
+while wfin = false do
+
+-- calcular resto del dni
+set wresto = wdni % 23;
+
+-- sacar la letra correspondiente
+set wletra = substring(wcadena, wresto + 1, 1);
+
+-- actualizar la letra en la tabla
+update empleados set letra_dni = wletra where dni = wdni;
+
+-- añadir datos al fichero
+set wtodo = concat(wtodo, wdni, wletra, ' - ', wnombre, ' - ', wapellidos, '\r');
+
+-- leer el siguiente registro
+fetch cursor1 into wdni, wnombre, wapellidos;
+
+end while;
+
+close cursor1;
+
+-- crear el fichero 
+select wtodo into outfile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/resultado.txt';
+
+end $$
+
+delimiter ;

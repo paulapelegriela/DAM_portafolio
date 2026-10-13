@@ -1,0 +1,17 @@
+# Maquinas virtuales e instaladores
+/DAM1/Sistemas informaticos/maquinas/
+*.iso
+*.ova
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.7z
+*.exe
+*.part
+*.log
+
+# Archivos generados por Eclipse y Java
+**/.metadata/
+**/bin/
+*.class

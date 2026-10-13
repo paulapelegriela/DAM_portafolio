@@ -1,0 +1,142 @@
+:root {
+  /* Colores Modo Claro */
+  --color-fondo: white;
+  --color-texto: white;
+  --color-enlace: palevioletred;
+  --bg-boton: white;
+  --txt-boton: black;
+  --color-enlace-hover: white;
+  --color-footer: black;
+}
+body.dark {
+  /* Colores Modo Oscuro */
+  --color-fondo: black;
+  --color-texto: black;
+  --color-enlace: #ff85a2;
+  --bg-boton: black;
+  --txt-boton: white;
+  --color-enlace-hover: black; 
+  --color-footer: white;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transition: all 0.3s ease;
+}
+
+.encabezado {
+    background-color: rgb(97, 17, 95); /*color de fondo del encabezado*/
+    display: flex;           /*usa flexbox*/
+    justify-content: center; /*centra los enlaces*/
+    gap: 20px;               /*espacio entre enlaces*/
+}
+
+a {
+    color: var(--color-enlace); /* Variable más arriba de color palevioletred */
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-enlace-hover);
+}
+
+.a {
+    background-color: rgb(224, 16, 86); /*fondo rosa*/
+    font: 200% serif; /*tamaño y tipo de texto*/
+}
+
+.b {
+    color: var(--color-texto); 
+    font-weight: bold;
+}
+
+.i {
+    background-image: url("imagenes/banner.png"); /*imagen del banner*/
+    background-size: cover;     /*cubre todo el banner*/
+    background-position: center; /*centrada*/
+    width: 100%; /*ancho completo*/
+    height: 400px; /*altura fija*/
+    display: flex; 
+    justify-content: flex-end; /*contenido abajo*/
+    align-items: flex-end; 
+    flex-direction: column; /*en forma de columna*/
+    align-items: center; /*centra lo de dentro horizontalmente*/
+}
+
+.boton {    
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra el botón*/
+}
+
+button {
+    background-color: var(--bg-boton); /* Cambia de negro a blanco */
+    color: var(--txt-boton);           /* Cambia de blanco a negro */
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+#btn {
+    padding: 5px 10px;
+    background-color: rgb(97, 17, 95);
+    color:palevioletred;
+}
+    
+.fondo {
+    background-image: url("imagenes/brochas.png");
+    background-repeat: repeat;
+    background-size: 300px;
+    color: var(--color-texto); 
+    padding: 60px 0;
+}
+
+.blanco {
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra el contenido*/
+}
+.blanco button {
+    background-color: var(--bg-boton);
+    color: var(--txt-boton);
+    border: 1px solid gray;
+}
+
+.c {
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra contenido*/
+}
+.footer {
+    color: var(--color-footer);
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra contenido*/
+}
+
+/* Apartado de la lista de tareas */
+
+.tareas {
+    text-align: center;
+    margin: 40px;
+    color: var(--color-footer);
+}
+
+#tareaInput {
+    padding: 10px;
+    width: 250px;
+}
+
+#listaTareas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#listaTareas li {
+    margin: 10px auto;
+    width: 300px;
+    background-color: var(--color-enlace);
+    color: var(--color-texto);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,153 @@
+/*Crear las tablas*/
+
+-- CREAR TABLA EQUIPOS (antes para poder usar la foreign key)
+CREATE TABLE equipos (
+nombre VARCHAR (50) PRIMARY KEY,
+categoria VARCHAR(50) NOT NULL,
+posicion_en_liga INT NOT NULL,
+numero_jugadores INT NOT NULL,
+ADA VARCHAR(45) NOT NULL);
+
+
+-- CREAR TABLA DE JUGADORES 
+CREATE TABLE jugadores (
+nif VARCHAR (9) PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+apellidos VARCHAR(50) NOT NULL,
+edad INT NOT NULL,
+partidos_jugados INT NOT NULL,
+importe_prima INT NOT NULL,
+nom_equipo VARCHAR (50) NOT NULL,
+JBC VARCHAR(45) NOT NULL,
+FOREIGN KEY (nom_equipo) REFERENCES equipos(nombre));
+
+-- CREAR TABLA TOTALES_TABLA
+
+CREATE TABLE totales_tabla (
+    tabla VARCHAR(20) PRIMARY KEY,
+    num_registros INT NOT NULL,
+    PPE VARCHAR(45) NOT NULL,
+    SGA VARCHAR(45) NOT NULL);
+
+/*Insertar los dos registros en la tabla totales*/
+
+INSERT INTO totales_tabla VALUES  ('jugadores', 0,  'PAULA PELEGRI ELA',  'SEBASTIAN GÁRCIA AZAÑÁ');
+INSERT INTO totales_tabla VALUES ('equipos', 0, 'PAULA PELEGRI ELA',  'SEBASTIAN GARCIA AZAÑA');
+
+/*TRIGGERS*/
+
+--trigger de alta jugadores
+drop trigger if exists trigger_alta_jugador;
+
+delimiter $$
+
+create trigger trigger_alta_jugador
+after insert on jugadores
+for each row
+begin
+-- Actualizamos el contador en la tabla equipos
+update equipos set numero_jugadores = numero_jugadores + 1 where nombre = new.nom_equipo;
+
+-- Actualizamos el contador global en totales_tabla
+update totales_tabla set num_registros = num_registros + 1 where tabla = 'jugadores';
+
+end $$
+delimiter ;
+
+
+-- trigger baja de jugadores 
+
+drop trigger if exists trigger_baja_jugadores;
+delimiter $$
+create trigger trigger_baja_jugadores
+after delete on jugadores
+for each row
+begin
+
+declare num_jugadores int;
+declare posicion_equipo int;
+
+-- restar un jugador menos del equipo
+update equipos set numero_jugadores = numero_jugadores - 1 where nombre = old.nom_equipo;
+
+-- Restar 1 jugador al total de registros 
+update totales_tabla set num_registros = num_registros - 1 where tabla = 'jugadores';
+
+-- apartado de eliminar el equipo si no quedan ningún jugador dentro
+
+-- ver cuantos jugadores quedan en el equipo
+select numero_jugadores into num_jugadores from equipos where nombre = old.nom_equipo;
+
+-- si no quedan jugadores borrar el equipo y subir los otros equipos una posición
+if num_jugadores = 0 then
+
+	-- guardar la posición del equipo y borrar el equipo
+	select posicion_en_liga into posicion_equipo from equipos where nombre = old.nom_equipo;
+	delete from equipos where nombre = old.nom_equipo;
+
+	-- Subir posiciones de los equipos por debajo (comparando la variable con la posición guardada y camparandola con las posiciones en liga)
+	update equipos set posicion_en_liga = posicion_en_liga - 1 where posicion_en_liga > posicion_equipo;
+end if;
+end $$
+
+delimiter ;
+
+
+-- trigger alta de equipo
+
+drop trigger if exists trigger_alta_equipo;
+delimiter $$
+
+create trigger trigger_alta_equipo
+after insert on equipos 
+for each row 
+begin 
+ -- modifca la tabla, agregamos 1 al num de registros en la seccion de equipos
+    update totales_tabla set num_registros = num_registros + 1 where tabla = 'equipos';
+end $$
+delimiter ;
+
+
+-- trigger baja de equipo
+
+drop trigger if exists trigger_baja_equipo;
+delimiter $$
+
+create trigger trigger_baja_equipo
+after delete on equipos
+for each row
+begin
+-- modificamos la tabla restando esta vez uno en la sección de equipos
+update totales_tabla set num_registros = num_registros - 1 where tabla = 'equipos';
+end $$
+delimiter ;
+
+/*INSERTAR REGISTROS*/
+
+-- 6 registros en la tabla de equipos
+INSERT INTO equipos (nombre, categoria, posicion_en_liga, numero_jugadores, ADA) VALUES ('Barcelona', 'juveniles', 1, 0, 'Angela Dávila Alegria'), ('Real Madrid', 'juveniles', 2, 0, 'Angela Dávila Alegria'), ('CD Menorca', 'juveniles', 3, 0, 'Angela Dávila Alegria'), ('Boca Juniors', 'juveniles', 4, 0, 'Angela Dávila Alegria'), ('Liverpool', 'juveniles', 5, 0, 'Angela Dávila Alegria'), ('Chelsea', 'juveniles', 6, 0, 'Angela Dávila Alegria');
+
+-- 6 registros en la tabla de jugadores
+insert into jugadores values ('12345678J', 'Lamine Yamal', 'Nasraoui Ebana', 18, 10, 20000, 'Barcelona', 'Javier Bravo Castillo');
+
+insert into jugadores values ('23456781H', 'Pablo', 'Paez Gavira', 21, 40, 18000, 'Barcelona', 'Javier Bravo Castillo');
+
+insert into jugadores values ('34567891K', 'Federico', 'Valverde Garcia', 26, 150, 13000, 'Real Madrid', 'Javier Bravo Castillo');
+
+insert into jugadores values ('45678923G', 'Lluc', 'Moll Perez', 22, 90, 15000, 'CD Menorca', 'Javier Bravo Castillo'); 
+
+insert into jugadores values ('56789234F', 'Luis Ismael', 'Nuñez Lopez', 25, 100, 16000, 'Liverpool', 'Javier Bravo Castillo');
+
+insert into jugadores values ('67891234D', 'Luis Miguel', 'Piastri Lorca', 28, 200, 13000, 'Chelsea', 'Javier Bravo Castillo');
+
+/*VISTAS*/
+
+-- vista de los datos de los jugadores
+
+CREATE VIEW view_datos_equipos AS 
+SELECT jugadores.apellidos, jugadores.nombre,jugadores.nif,jugadores.edad,equipos.nombre AS nombre_equipo, equipos.categoria, equipos.posicion_en_liga FROM jugadores
+INNER JOIN equipos ON jugadores.nom_equipo = equipos.nombre ORDER BY jugadores.apellidos ASC, jugadores.nombre ASC;
+
+-- vista de descuadre
+create view view_descuadre as
+select equipos.* from equipos where numero_jugadores != (select count(*) from jugadores where jugadores.nom_equipo = equipos.nombre);

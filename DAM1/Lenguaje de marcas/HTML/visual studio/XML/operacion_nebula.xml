@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE operacion_nebula SYSTEM "operacion_nebula.dtd">
+<operacion_nebula>
+    <Investigacion_Policial>
+        <nombre>Operación Nébula</nombre>
+        <fecha>12/02/2026</fecha>
+        <unidad>Unidad de Delitos Tecnológicos</unidad>
+        <estado>abierto</estado>
+
+        <empresa_denunciante>
+            <nombre>BlueMart Logistics S.L</nombre>
+            <CIF>B-47299110</CIF>
+            <ciudad>Madrid</ciudad>
+        </empresa_denunciante>
+
+        <equipo_investigador>
+            <agente>
+                <nombre>Víctor Salas</nombre>
+                <rango>inspector</rango>
+                <placa>PN-3482</placa>
+            </agente>
+            <agente>
+                <nombre>Elena Roldán</nombre>
+                <rango>subinspectora</rango>
+                <placa>PN-7710</placa>
+            </agente>
+        </equipo_investigador>
+
+        <Cronologia_hitos>
+            <hito>
+                <fecha>10/02/2026</fecha>
+                <hora>03:14</hora>
+                <usuario>operaciones_2</usuario>
+                <descripcion>Inicio de sesión exitoso con fuerza bruta, cambios de configuración y un archivo comprimido</descripcion>
+                <nombre_archivo_zip>backup_feb.zip</nombre_archivo_zip>
+            </hito>
+            <hito>
+                <fecha>14/02/2026</fecha>
+                <usuario>creación de una cuenta secundaria</usuario>
+                <descripcion>creación de una cuenta secundaria con permisos y un script</descripcion>
+                <script>
+                    <nombre>sync.php</nombre>
+                    <tipo_cod>ofuscado</tipo_cod>
+                </script>
+            </hito>
+        </Cronologia_hitos>
+
+        <evidencias>
+            <evidencia cod="001">volcado de logs del servidor
+                <ruta_carpeta>ALM-NEBULA/LOGS/2026-02</ruta_carpeta>
+            </evidencia>
+            <evidencia cod="002">imagen forense de la carpeta de configuración del panel web</evidencia>
+            <evidencia cod="003">copia del script</evidencia>
+            <evidencia cod="004">captura del estado de procesos y conexiones activas</evidencia>
+        </evidencias>
+
+        <objetos_intervenidos>
+            <OBJ-001>
+                <tipo>portatil</tipo>
+                <marca>AresBook</marca>
+                <num_serie>AB-88X19</num_serie>
+            </OBJ-001>
+            <OBJ-002>memoria USB</OBJ-002>
+            <OBJ-003>memoria USB</OBJ-003>
+        </objetos_intervenidos>
+
+        <sospechoso>
+            <nombre>Óscar Lafuente</nombre>
+            <DNI>12345678Z</DNI>
+            <relacion>ex empleado (despedido)</relacion>
+        </sospechoso>
+
+        <documento_anexo>
+            <fecha_entrega>25/02/2026</fecha_entrega>
+            <nombre_doc>DOC-001</nombre_doc>
+            <autor>Daniel Arcos</autor>
+        </documento_anexo>
+
+        <recomendaciones>
+            <recomendacion>activar autenticación multifactor</recomendacion>
+            <recomendacion>rotar contraseñas</recomendacion>
+            <recomendacion>reforzar el registro de eventos</recomendacion>
+        </recomendaciones>
+    </Investigacion_Policial>
+</operacion_nebula>

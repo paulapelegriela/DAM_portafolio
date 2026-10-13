@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eventos>
+    <Evento id="1" modalidad="presencial">
+        <nombre>Horizon Deep Tech Summit</nombre>
+        <fecha>10/11/2026</fecha>
+        <ubicacion>
+            <ciudad>Madrid</ciudad>
+            <pais>España</pais>
+        </ubicacion>
+        <precio moneda="euro">299</precio>
+        <ponentes>
+            <ponente>
+                <nombre>Esperanza Cuenca Gómez</nombre>
+                <empresa>Quantum Comuting, NVIDIA</empresa>
+                <experiencia>10</experiencia>
+            </ponente>
+            <ponente>
+                <nombre>Richard Benjamins</nombre>
+                <empresa>OdiseIA</empresa>
+                <experiencia>8</experiencia>
+            </ponente>
+        </ponentes>
+        <plazas total="30000" disponibles="14062"/>
+    </Evento>
+    
+    <Evento id="2" modalidad="online">
+        <nombre>ODR ExpoTech</nombre>
+        <fecha>21/04/2026</fecha>
+        <ubicacion>
+            <ciudad>Buenos aires</ciudad>
+            <pais>Argentina</pais>
+        </ubicacion>
+        <precio moneda="pesos">0</precio>
+        <ponentes>
+            <ponente>
+                <nombre>Juan María Luce</nombre>
+                <empresa>ODR</empresa>
+                <experiencia>7</experiencia>
+            </ponente>
+            <ponente>
+                <nombre>Alicia Millán</nombre>
+                <empresa>UNTREF</empresa>
+                <experiencia>4</experiencia>
+            </ponente>
+        </ponentes>
+        <plazas total="50" disponibles="22"/>
+    </Evento>
+    
+    <Evento id="3" modalidad="hibrido">
+        <nombre>Consumer Electronic Show</nombre>
+        <fecha>06/06/2027</fecha>
+        <ubicacion>
+            <ciudad>Las vegas</ciudad>
+            <pais>Estados Unidos</pais>
+        </ubicacion>
+        <precio moneda="dolar">140</precio>
+        <ponentes>
+            <ponente>
+                <nombre>Kate Van Dam</nombre>
+                <empresa>SkyFi</empresa>
+                <experiencia>6</experiencia>
+            </ponente>
+            <ponente>
+                <nombre>Peter Yang</nombre>
+                <empresa>Roblox</empresa>
+                <experiencia>7</experiencia>
+            </ponente>
+            <ponente>
+                <nombre>Justin Honaman</nombre>
+                <empresa>Amazon</empresa>
+                <experiencia>8</experiencia>
+            </ponente>
+        </ponentes>
+        <plazas total="60000" disponibles="54736"/>
+    </Evento>
+</Eventos>

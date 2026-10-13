@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+
+<!ELEMENT biblioteca (libro+)>
+
+<!ELEMENT libro (titulo, autor, genero, fecha_publicacion)>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT fecha_publicacion (#PCDATA)>
+
+]>
+
+<biblioteca>
+
+    <libro>
+        <titulo>Lps 7 maridos de Evelyn Hugo</titulo>
+        <autor>Taylor Jenkins Reid</autor>
+        <genero>Novela</genero>
+        <fecha_publicacion>13/06/2017</fecha_publicacion>
+    </libro>
+
+    <libro>
+        <titulo>Platero y yo</titulo>
+        <autor>Juan Ramón Jiménez</autor>
+        <genero>Narrativo</genero>
+        <fecha_publicacion>1914</fecha_publicacion>
+    </libro>
+
+    <libro>
+        <titulo>El poder</titulo>
+        <autor>Rhonda Byrne</autor>
+        <genero>Libro de autoayuda</genero>
+        <fecha_publicacion>2010</fecha_publicacion>
+    </libro>
+
+</biblioteca>

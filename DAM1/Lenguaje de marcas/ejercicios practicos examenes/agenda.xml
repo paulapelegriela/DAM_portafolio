@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "agenda.dtd">
+<agenda>
+
+    <contacto>
+        <nombre>Júlia</nombre>
+        <apellidos>Fortuny Mantolan</apellidos>
+        <telefono>612345678</telefono>
+        <telefono>987654321</telefono>
+        <email>juliaa123@gmail.com</email>
+        <direccion>
+            <calle>pintor calbo</calle>
+            <numero>12</numero>
+            <ciudad>Menorca</ciudad>
+            <provincia>Islas Baleares</provincia>
+            <codigoPostal>07703</codigoPostal>
+        </direccion>
+        <etiqueta>amiga</etiqueta>
+        <fechaNacimiento>2006-08-13</fechaNacimiento>
+    </contacto>
+
+    <contacto>
+        <nombre>Brandon</nombre>
+        <apellidos>Vega Gomez</apellidos>
+        <telefono>685392451</telefono>
+        <telefono>698745321</telefono>
+        <email>brandonvega20@gmail.com</email>
+        <direccion>
+            <calle>El Fructos</calle>
+            <numero>45</numero>
+            <ciudad>Barcelona</ciudad>
+            <provincia>Cataluña</provincia>
+            <codigoPostal>08001</codigoPostal>
+        </direccion>
+        <etiqueta>profesional</etiqueta>
+        <fechaNacimiento>2005-08-25</fechaNacimiento>
+    </contacto>
+
+    <contacto>
+        <nombre>Angela</nombre>
+        <apellidos>Pelegri Ela</apellidos>
+        <telefono>654987321</telefono>
+        <email>angelapeelgri62@gmail.com</email>
+        <direccion>
+            <calle>Merida</calle>
+            <numero>29</numero>
+            <ciudad>Madrid</ciudad>
+            <provincia>Comunidad de Madrid</provincia>
+            <codigoPostal>28350</codigoPostal>
+        </direccion>
+            <etiqueta>hermana</etiqueta>
+            <fechaNacimiento>2007-05-07</fechaNacimiento>
+    </contacto>
+
+</agenda>

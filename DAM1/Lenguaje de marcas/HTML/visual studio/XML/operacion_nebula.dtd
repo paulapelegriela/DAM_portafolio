@@ -1,0 +1,44 @@
+<!ELEMENT operacion_nebula (Investigacion_Policial)>
+<!ELEMENT Investigacion_Policial (
+nombre, fecha, unidad, estado,empresa_denunciante, equipo_investigador,Cronologia_hitos, evidencias,objetos_intervenidos,
+sospechoso, documento_anexo, recomendaciones)>
+<!ELEMENT empresa_denunciante (nombre, CIF, ciudad)>
+<!ELEMENT equipo_investigador (agente+)>
+<!ELEMENT agente (nombre, rango, placa)>
+<!ELEMENT Cronologia_hitos (hito+)>
+<!ELEMENT hito (fecha, hora?, usuario, descripcion, nombre_archivo_zip?, script?)>
+<!ELEMENT script (nombre, tipo_cod)>
+<!ELEMENT evidencias (evidencia+)>
+<!ELEMENT evidencia (#PCDATA | ruta_carpeta)*>
+<!ATTLIST evidencia cod CDATA #REQUIRED>
+<!ELEMENT objetos_intervenidos (OBJ-001, OBJ-002, OBJ-003)>
+<!ELEMENT OBJ-001 (tipo, marca, num_serie)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT num_serie (#PCDATA)>
+<!ELEMENT OBJ-002 (#PCDATA)>
+<!ELEMENT OBJ-003 (#PCDATA)>
+<!ELEMENT sospechoso (nombre, DNI, relacion)>
+<!ELEMENT documento_anexo (fecha_entrega, nombre_doc, autor)>
+<!ELEMENT recomendaciones (recomendacion+)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT unidad (#PCDATA)>
+<!ELEMENT estado (#PCDATA)>
+<!ELEMENT CIF (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT rango (#PCDATA)>
+<!ELEMENT placa (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT usuario (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT nombre_archivo_zip (#PCDATA)>
+<!ELEMENT tipo_cod (#PCDATA)>
+<!ELEMENT ruta_carpeta (#PCDATA)>
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT relacion (#PCDATA)>
+<!ELEMENT fecha_entrega (#PCDATA)>
+<!ELEMENT nombre_doc (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT recomendacion (#PCDATA)>

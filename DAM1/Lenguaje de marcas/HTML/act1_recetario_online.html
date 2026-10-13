@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"> 
+	<title>Recetario Online</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name "description"="Página de recetas con errores para práctica">
+</head>
+
+<body>
+<header>
+	<h1>Bienvenidos al recetario</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="postres.html" target="_blank">Postres</a></li>
+			<li><a HREF="contacto.html"> Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+<section id="presentacion">
+	<h2>Presentación</h2>
+	<p>En este sitio encontrarás <em>recetas</em> de todo tipo, <strong>postres, carnes y pastas</p>
+	<img src="chef.jpg" alt="Chef cocinando" width="350" height="200">
+	<br>
+	<p>¡Explora nuestras recetas más populares!</p>
+</section>
+
+<section id="recetas">
+	<h2>Recetas destacadas</h2>
+
+	<article>
+		<h3>Receta 1: Paella Valenciana</h3>
+		<img src="paella.jpg" alt="Paella Valenciana">
+		<p>Ingredientes principales:</p>
+		<ul>
+			<li>Arroz</li>
+			<li>Pollo</li>
+			<li>Judias verdes</li>
+			<li>Azafrán</li>
+		</ul>
+		<p>Tiempo estimado: <span class="tiempo" style="font-weight:bold">45 minutos</span></p>
+		<p><a href="recetal.html">Ver receta completa</a></p>
+	</article>
+	
+	<article>
+		<h3>Receta 2: Tarta de queso</h3>
+		<img src="tarta.jpg" alt="Tarta de queso casera" width="300">
+		<p>Una tarta deliciosa y fácil de preparar.</p>
+		<p> Ingredientes:</p>
+		<ol>
+			<li>Queso crema</li>
+			<li>Huevos</li>
+			<li>Azúcar</li>
+			<li>Galletas trituradas</li>
+		</ol>
+		<p><a href="tarta.html" title="Ver más detalles">Ver receta</a></p>
+	</article>
+	
+	<article>
+		<h3>Receta 3: Pasta Carbonara</h3>
+		<img src="carbonara.jpg" alt="Pasta Carbonara">
+		<p>Ingredientes:</p>
+		<ul>
+			<li>Espaguetis</li>
+			<li>Huevo</li>
+			<li>Panceta</li>
+		</ul>
+		<p>Autor: <em><a href="chef.html" target="_blank">Chef Marco</a></em></p>
+	</article>
+</section>
+
+<section id="tabla-calorias">
+	<h2>Tabla comparativa de calorías</h2>
+	<table border="1">
+	<tr>
+		<th>Plato</th><th>Calorías</th><th>Tiempo de cocción</th>
+	</tr>
+	<tr>
+		<td>Paella</td><td>620</td><td>45 min</td>
+	</tr>
+	<tr>
+		<td>Tarta de queso</td><td>520</td><td>60 min</td>
+	</tr>
+	<tr>
+		<td>Pasta Carbonara</td><td>480</td><td>30 min</td>
+	</tr>
+	</table>
+</section>
+
+<section id="formulario-contacto">
+	<h2>Contáctanos</h2>
+	<form action="enviar.php" method="post">
+		<label for="nombre">Nombre</label><br>
+		<input type="text" id="nombre" name="nombre">
+		<br>
+		<label for="email">Correo electrónico</label><br>
+		<input type="mail" id="email" name="email">
+		<br>
+		<label for="mensaje">Mensaje</label><br>
+		<textarea id="mensaje" name="mensaje" rows="5" cols="40"></textarea>
+		<br>
+		<input type="submit" value="Enviar mensaje">
+	</form>
+</section>
+
+<aside>
+	<h3>Consejos del chef</h3>
+	<p>No olvides probar tus platos antes de servirlos, ¡y disfruta cocinando!</p>
+	<img src="chef_consejo.jpg" alt="">
+	<p><a href="masconsejos.html" target="_blank">Ver más consejos</a></p>
+</aside>
+</main>
+
+<footer>
+	<p>&copy 2025 Recetario Online</p>
+	<p>Visítanos en <a href="http:/www.recetario.com">www.recetario. com</a></p> 
+	<address>Correo: contacto@recetario.com<br>Teléfono: +34 600 123 456</address>
+</footer>
+</body>
+</html>

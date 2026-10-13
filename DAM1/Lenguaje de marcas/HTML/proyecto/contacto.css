@@ -1,0 +1,91 @@
+.encabezado {
+    background-color: rgb(97, 17, 95);/*color de fondo del encabezado*/
+    display: flex;           
+    justify-content: center; /*hipervínculos centrados*/   
+    gap: 20px; /*espacio entre ambos*/
+}
+a {
+    color: palevioletred; /*color inicial del enlace*/
+    text-decoration: none; /*quita el subrayado*/
+}
+
+a:hover {
+    color: white; /*se cambia a blanco al pasar el cursor*/
+}
+
+.contacto-fondo {
+    background-image: url("imagenes/fondo_colores.png");
+    background-size: cover; 
+    background-position: center; 
+    min-height: 100vh; 
+    padding: 60px; /*el espacio interior*/
+    text-align: center; /*centra el texto*/
+}
+
+.titulo {
+    font-size: 50px;
+    font-style: italic; /*cursiva*/
+}
+
+.subtitulo {
+    margin-bottom: 40px; /*el espacio de abajo*/
+}
+
+.subtitulo-form {
+    margin-bottom: 20px; /*el espacio antes del formulario*/
+}
+
+.caja-formulario {
+    padding: 30px; /*el espacio interno*/
+    width: 40%; /*el ancho de cada caja*/
+    margin: auto; /*centrada horizontalmente*/
+    box-sizing: border-box; 
+}
+
+.caja-formulario input,
+.caja-formulario textarea {
+    display: block; /*uno debajo de otro*/
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 15px; /*la separación entre campos*/
+    background-color: rgba(99, 2, 36, 0.75); /*fondo semitransparente*/
+    border: none; /*sin borde*/
+    outline: none; /*sin borde al hacer clic*/
+    color: white; 
+}
+
+.caja-formulario input:hover,
+.caja-formulario textarea:hover {
+    background-color: rgba(255, 0, 102, 0.7); /*el color de fondo de los formularios*/
+}
+
+.caja-formulario input:focus,
+.caja-formulario textarea:focus {
+    background-color: rgba(255, 0, 102, 0.8);
+    outline: none; /*quita el borde azul*/
+}
+
+.caja-formulario input[type="submit"] {
+    background-color: white; /*color interno del botón*/
+    color: black; 
+    border: none; 
+    padding: 8px 25px; /*tamaño del botón*/
+    width: auto; /*que no ocupe todo el espacio*/
+    cursor: pointer; /*al pasar el cursor cambie a una mano*/
+    float: right; /*posición a la derecha*/
+    display: block; 
+}
+
+.caja-formulario input[type="submit"]:hover {
+    background-color: rgba(255, 132, 192, 0.7); /*el color se cambia a rosa al pasar el cursor por encima*/
+    color: white; 
+    transition: background-color 0.5s ease; /*transición suave (de cambio de color) al pasar el cursor*/
+}
+
+.footer-naranja {
+    background-image: url("imagenes/fondo.png");
+    background-size: cover; /*cubre toda la zona*/
+    background-position: center;
+    padding: 60px;
+    text-align: center; /*texto centrado*/
+}

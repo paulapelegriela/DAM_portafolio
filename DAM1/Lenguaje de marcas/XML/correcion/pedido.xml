@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE pedidos SYSTEM "pedido.dtd">
+
+<pedidos>
+  <pedido id="p01">
+  <cliente>
+    <nombre>Juan</nombre>
+    <apellido>Pérez</apellido>
+  </cliente>
+
+  <fecha>2025-04-04</fecha>
+  <producto>
+    <nombre>Ratón inalámbrico</nombre>
+    <cantidad>2</cantidad>
+    <precio>15.99</precio>
+  </producto>
+
+  <producto>
+    <nombre>Teclado mecánico</nombre>
+    <cantidad>1</cantidad>
+    <precio>49.95</precio>
+  </producto> 
+
+  <producto>
+    <nombre>Auriculares Bluetooth</nombre>
+    <cantidad>1</cantidad>
+    <precio>29.99</precio>
+</producto>
+</pedido>
+
+<pedido id="p02">
+  <cliente>
+    <nombre>María</nombre>
+    <apellido>Pérez</apellido>
+  </cliente>
+
+  <fecha>2025-04-05</fecha>
+  <producto>
+    <nombre>Tablet</nombre>
+    <cantidad>1</cantidad>
+    <precio>499.99</precio>
+  </producto>
+
+  <producto>
+    <nombre>Silla gamer</nombre>
+    <cantidad>1</cantidad>
+    <precio>99.99</precio>
+  </producto>
+  </pedido>
+</pedidos>

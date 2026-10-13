@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "problema_2.dtd">
+
+<agenda>
+
+    <contacto>
+        <nombre>Júlia Fortuny</nombre>
+        <telefono>612345678</telefono>
+        <email>juliaa123@email.com</email>
+
+        <etiquetas>
+            <etiqueta>amiga</etiqueta>
+        </etiquetas>
+    </contacto>
+
+    <contacto>
+        <nombre>Brandon Vega</nombre>
+        <telefono>698745321</telefono>
+
+        <etiquetas>
+            <etiqueta>amigo</etiqueta>
+            <etiqueta>pareja</etiqueta>
+        </etiquetas>
+    </contacto>
+
+    <contacto>
+        <nombre>Angela Sánchez</nombre>
+        <telefono>654987321</telefono>
+        <email>angela.sanchez@email.com</email>
+
+        <etiquetas>
+            <etiqueta>amiga</etiqueta>
+            <etiqueta>familia</etiqueta>
+        </etiquetas>
+    </contacto>
+
+</agenda>

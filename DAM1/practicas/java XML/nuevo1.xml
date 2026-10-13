@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<DatosComunes>
+	<nombre>Brandon</nombre>
+	<restaurante>Casa Brandon</restaurante>
+	<restaurantes>
+		<info id="1">
+			<cif></cif>
+			<nombre></nombre>
+		</info>
+		<info id="2">
+			<cif></cif>
+			<nombre></nombre>
+		</info>
+	</restaurantes>
+</DatosComunes>
+	<restaurante>

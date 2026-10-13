@@ -1,0 +1,7 @@
+<!ELEMENT persona (nombre, apellido, edad, telefono)>
+<!ATTLIST persona id ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>

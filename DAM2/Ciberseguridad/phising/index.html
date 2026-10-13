@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acceder - Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+
+        <div class="logo">
+            <img src="logo.png" alt="Crunchyroll">
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="login">
+
+            <h1>Acceder</h1>
+
+
+            <form id="loginForm">
+
+                <div class="campo">
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder=" "
+                        autocomplete="off"
+                        required
+                    >
+
+                    <label for="email">
+                        Dirección de email
+                    </label>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder=" "
+                        autocomplete="off"
+                        required
+                    >
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                </div>
+
+
+                <button
+                    id="botonAcceder"
+                    type="submit"
+                >
+                    ACCEDER
+                </button>
+
+            </form>
+
+
+            <div class="enlaces">
+
+                <a href="https://sso.crunchyroll.com/es-es/reset-password?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover%253Futm_source%253Dgoogle%2526utm_medium%253Dpaid_cr%2526utm_campaign%253DCR_SV_EURO_ESP_SP_FTD_SEM_SEB_WEB_TRADEMARK-DESKTOP%2526utm_term%253Dcrunchyroll%2526referrer%253Dgoogle_paid_cr_CR_SV_EURO_ESP_SP_FTD_SEM_SEB_WEB_TRADEMARK-DESKTOP%2526gad_source%253D1%2526gad_campaignid%253D23629130792%2526gclid%253DCj0KCQjwlNPVBhCMARIsAPZ5RqiL2LtogP3ES2c_SccaW5umO37am0cp0CEFe9SdtNwmGAZvHa0RjLEaApgFEALw_wcB">
+                    ¿HAS OLVIDADO TU CONTRASEÑA?
+                </a>
+
+                <span>|</span>
+
+                <a href="https://sso.crunchyroll.com/es-es/register?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover%253Futm_source%253Dgoogle%2526utm_medium%253Dpaid_cr%2526utm_campaign%253DCR_SV_EURO_ESP_SP_FTD_SEM_SEB_WEB_TRADEMARK-DESKTOP%2526utm_term%253Dcrunchyroll%2526referrer%253Dgoogle_paid_cr_CR_SV_EURO_ESP_SP_FTD_SEM_SEB_WEB_TRADEMARK-DESKTOP%2526gad_source%253D1%2526gad_campaignid%253D23629130792%2526gclid%253DCj0KCQjwlNPVBhCMARIsAPZ5RqiL2LtogP3ES2c_SccaW5umO37am0cp0CEFe9SdtNwmGAZvHa0RjLEaApgFEALw_wcB">
+                    CREAR CUENTA
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-enlaces">
+
+            <a href="https://www.crunchyroll.com/es-es/tos/">
+                Condiciones de Uso
+            </a>
+
+            <span>|</span>
+
+            <a href="https://intl.sonypictures.com/en/privacy-policy">
+                Política de Privacidad
+            </a>
+
+            <span>|</span>
+
+            <a href="#">
+                Consentimiento de cookies
+            </a>
+
+        </div>
+
+
+        <div class="footer-inferior">
+
+            <div class="copyright">
+
+                <span class="sony">
+                    SONY PICTURES
+                </span>
+
+                <span>|</span>
+
+                <span class="crunchyroll-copy">
+                    © Crunchyroll, LLC
+                </span>
+
+            </div>
+
+
+            <!-- SELECTOR DE IDIOMA -->
+            <div class="selector-idioma">
+
+                <button
+                    id="botonIdioma"
+                    type="button"
+                >
+
+                    <span class="flecha">
+                        ▼
+                    </span>
+
+                    <span id="idiomaSeleccionado">
+                        ESPAÑOL (ESPAÑA)
+                    </span>
+
+                </button>
+
+
+                <div id="listaIdiomas">
+
+                    <div class="idioma">
+                        English (US)
+                    </div>
+
+                    <div class="idioma">
+                        Español
+                    </div>
+
+                    <div class="idioma seleccionado">
+                        Español (España)
+                    </div>
+
+                    <div class="idioma">
+                        Português (Brasil)
+                    </div>
+
+                    <div class="idioma">
+                        Português (Portugal)
+                    </div>
+
+                    <div class="idioma">
+                        Français (France)
+                    </div>
+
+                    <div class="idioma">
+                        Deutsch
+                    </div>
+
+                    <div class="idioma">
+                        العربية
+                    </div>
+
+                    <div class="idioma">
+                        Italiano
+                    </div>
+
+                    <div class="idioma">
+                        Русский
+                    </div>
+
+                    <div class="idioma">
+                        हिन्दी
+                    </div>
+
+                    <div class="idioma">
+                        Bahasa Indonesia
+                    </div>
+
+                    <div class="idioma">
+                        ไทย
+                    </div>
+
+                    <div class="idioma">
+                        中文 (繁體)
+                    </div>
+
+                    <div class="idioma">
+                        Polski
+                    </div>
+
+                    <div class="idioma">
+                        한국어
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <div class="linea"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

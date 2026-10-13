@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Practica de HTML con errores</title>
+	<meta name "description" content="Ejercicio para encontrar errores">
+</head>
+<body>
+	<header>
+		<h1>Bienvenidos al ejercicio HTML</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="about.html">Sobre nosotros</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="intro">
+			<h2>Introducción</h2>
+			<p>Este documento contiene varios errores de <strong>HTML</strong> para que los alumnos practiquen 
+			detectando problemas de sintaxis y estructura.</p>
+			<img src="imagen.jpg" alt="Imagen educativa">
+		</section>
+		
+		<section id="contenido-principal"> 
+			<h3>Contenidos</h3>
+			<p>En este apartado veremos distintos elementos de HTML.</p>
+			
+			<article>
+				<h4>Listas</h4>
+				<p>A continuación un ejemplo de listas mal anidadas:</p>
+				<ul>
+					<li>Subelemento 1</li>
+					<li>Subelemento 2</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h4>Tablas</h4>
+				<table border="2">
+					<tr>
+						<th>Nombre</th><th>Edad</th><th>Ciudad</th>
+					</tr>
+					<tr>
+						<td>Maria</td><th>22</td><td>Sevilla</td>
+					</tr>
+					<tr>
+						<td>Pedro</td><th>30</td><td>Madrid</td>
+					</tr>
+					<tr>
+						<td>Lucía</td><th>19</td><td>Valencia</td>
+					</tr>
+				</table>
+			</article>
+			
+			<article>
+				<h4>Enlaces</h4>
+				<p>Ejemplo con errores de enlace:</p>
+				<a href="https://www.google.com" target="_blank">Google</a>
+				<a href="mailto:correo@ejemplo.com">Enviar correo</a>
+				<a href="">
+					<img src="icono.png" alt="icono de contacto">
+				</a>
+			</article>
+				<h4>Formularios</h4>
+				<form action="enviar.php" method="POST">
+					<label for="nombre">Nombre:</label><br>
+					<input type="text" id="nombre" name="nombre"><br>
+					<label for="email">Correo:</label><br>
+					<input type="email" id="email" name="email"><br>
+					<label for="mensaje">Mensaje:</label><br>
+					<textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br>
+					<input type="submit" value="Enviar">
+				</form>
+			</article>
+				
+			<article>
+				<h4>Multimedia</h4>
+				<video src="video.mp4" controls></video>
+				<audio src="audio.mp3" autoplay loop controls></audio>
+			</article>
+			
+			<article>
+				<h4>Otros errores comunes</h4>
+				<p>Etiqueta <center>obsoleta</center></p>
+				<font color="red">Esto tampoco se usa ya</font>
+				<marquee>Texto en movimiento</marquee>
+				<p align="center">Alineación mediante atributo</p>
+			</article>
+			
+			<article>
+			<h4>Divs mal anidados</h4>
+				<div>
+					<div>
+					<p>Esto está mal <strong>cerrado</strong></p>
+					</div>
+				</div>
+			</article>
+			
+			<article>
+				<h4>Secciones sin sentido semántico</h4>
+				<header>
+					<footer>
+						<h2>Título dentro del footer</h2>
+					</footer>
+				</header>
+			</article>
+			
+		</section>
+			
+		<section id="pie">
+			<h5>Pie de página</h5>
+			<p>&copy 2025 Centro Educativo</p>
+			<p>Visítanos en <a href="htp://www.medac.es">Medac</a></p>
+		</section>
+		
+		<aside>
+			<h4>Publicidad</h4>
+			<img src="banner.png" alt="">
+			<p>Contenido lateral no relacionado con el principal.</p>
+		</aside>
+		
+	</main>
+	
+	<footer>
+		<p>Documento creado para prácticas de validación HTML</p>
+		<address>
+			<p>Email: <a href="mailto:info@centro.com">info@centro.com</a></p>
+			<p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+		</address>
+	</footer>
+
+</body>
+</html>
+				
+				

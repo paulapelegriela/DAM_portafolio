@@ -1,0 +1,245 @@
+/* TABLAS */
+
+/* Creamos la tabla de clientes */
+
+CREATE TABLE clientes (
+nif varchar(9) primary key not null,
+nom_cliente varchar(20) not null,
+apellidos_cliente varchar(45) not null,
+fec_nacimiento date not null,
+dir_cod_provincia varchar(2) not null,
+dir_calle varchar(30) not null,
+dir_numero int not null,
+dir_ciudad varchar(30) not null,
+PPE varchar(50) not null);
+
+/* Creamos la tabla de los telefonos de clientes */
+
+CREATE TABLE clientes_telefonos (
+nif_cliente varchar(9) not null,
+tel_cliente varchar(12) not null,
+PPE varchar(50) not null,
+primary key (nif_cliente, tel_cliente));
+
+/* Creamos la tabla de los proveedores */
+
+CREATE TABLE proveedores (
+cif varchar(9) primary key not null,
+nombre varchar(30) not null,
+dir_central_calle varchar(30) not null,
+dir_central_telefono varchar(12) not null,
+dir_central_ciudad varchar(30) not null,
+PPE varchar(50) not null);
+
+/* Creamos la tabla de los números de calle de los proveedores */
+
+CREATE TABLE proveedores_num_calle_central (
+cif_proveedor varchar(9) not null,
+numero_calle int not null,
+PPE varchar(50) not null,
+primary key (cif_proveedor, numero_calle));
+
+/* Creamos la tabla de los muebles */
+
+CREATE TABLE muebles (
+codigo int primary key not null,
+descripcion varchar(200) not null,
+precio double not null,
+cif_proveedor varchar(9) not null,
+nif_cliente varchar(9),
+PPE varchar(50) not null);
+
+/* Creamos la tabla de las provincias */
+
+CREATE TABLE provincias (
+cod_provincia varchar(2) primary key not null,
+nom_provincia varchar(45) not null,
+cod_comunidad varchar(2) not null,
+PPE varchar(50) not null);
+
+/* Creamos la tabla de las comunidades */
+
+CREATE TABLE comunidades (
+cod_comunidad varchar(2) primary key not null,
+nom_comunidad varchar(45) not null,
+PPE varchar(50) not null);
+
+/* RELACIONES */
+
+/* relación en la tabla clientes */
+
+ALTER TABLE clientes
+add foreign key (dir_cod_provincia) references provincias(cod_provincia);
+
+/* relación en la tabla clientes_telefonos */
+
+ALTER TABLE clientes_telefonos
+add foreign key (nif_cliente) references clientes(nif);
+
+/* relación en la tabla proveedores_num_calle_central */
+
+ALTER TABLE proveedores_num_calle_central
+add foreign key (cif_proveedor) references proveedores(cif);
+
+/* relaciones en la tabla muebles */
+
+ALTER TABLE muebles
+add foreign key (cif_proveedor) references proveedores(cif);
+
+ALTER TABLE muebles
+add foreign key (nif_cliente) references clientes(nif);
+
+/* relación en la tabla provincias */
+
+ALTER TABLE provincias
+add foreign key (cod_comunidad) references comunidades(cod_comunidad);
+
+/* REGISTROS */
+
+/* Insertamos registros en la tabla comunidades */
+
+insert into comunidades values ('16','País Vasco','Paula Pelegri Ela');
+insert into comunidades values ('08','Castilla - La Mancha','Paula Pelegri Ela');
+insert into comunidades values ('10','Comunitat Valenciana','Paula Pelegri Ela');
+insert into comunidades values ('01','Andalucía','Paula Pelegri Ela');
+insert into comunidades values ('07','Castilla y León','Paula Pelegri Ela');
+insert into comunidades values ('11','Extremadura','Paula Pelegri Ela');
+insert into comunidades values ('04','Illes Balears','Paula Pelegri Ela');
+insert into comunidades values ('09','Cataluña','Paula Pelegri Ela');
+insert into comunidades values ('12','Galicia','Paula Pelegri Ela');
+insert into comunidades values ('02','Aragón','Paula Pelegri Ela');
+insert into comunidades values ('17','Rioja, La','Paula Pelegri Ela');
+insert into comunidades values ('13','Comunidad de Madrid','Paula Pelegri Ela');
+insert into comunidades values ('14','Región de Murcia','Paula Pelegri Ela');
+insert into comunidades values ('15','Comunidad Foral de Navarra','Paula Pelegri Ela');
+insert into comunidades values ('03','Asturias, Principado de','Paula Pelegri Ela');
+insert into comunidades values ('05','Canarias','Paula Pelegri Ela');
+insert into comunidades values ('06','Cantabria','Paula Pelegri Ela');
+insert into comunidades values ('18','Ceuta','Paula Pelegri Ela');
+insert into comunidades values ('19','Melilla','Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla provincias */
+
+insert into provincias values ('01','Álava','16','Paula Pelegri Ela');
+insert into provincias values ('02','Albacete','08','Paula Pelegri Ela');
+insert into provincias values ('03','Alicante','10','Paula Pelegri Ela');
+insert into provincias values ('04','Almería','01','Paula Pelegri Ela');
+insert into provincias values ('05','Ávila','07','Paula Pelegri Ela');
+insert into provincias values ('06','Badajoz','11','Paula Pelegri Ela');
+insert into provincias values ('07','Islas Baleares','04','Paula Pelegri Ela');
+insert into provincias values ('08','Barcelona','09','Paula Pelegri Ela');
+insert into provincias values ('09','Burgos','07','Paula Pelegri Ela');
+insert into provincias values ('10','Cáceres','11','Paula Pelegri Ela');
+insert into provincias values ('11','Cádiz','01','Paula Pelegri Ela');
+insert into provincias values ('12','Castellón','10','Paula Pelegri Ela');
+insert into provincias values ('13','Ciudad Real','08','Paula Pelegri Ela');
+insert into provincias values ('14','Córdoba','01','Paula Pelegri Ela');
+insert into provincias values ('15','La Coruña','12','Paula Pelegri Ela');
+insert into provincias values ('16','Cuenca','08','Paula Pelegri Ela');
+insert into provincias values ('17','Gerona','09','Paula Pelegri Ela');
+insert into provincias values ('18','Granada','01','Paula Pelegri Ela');
+insert into provincias values ('19','Guadalajara','08','Paula Pelegri Ela');
+insert into provincias values ('20','Guipúzcoa','16','Paula Pelegri Ela');
+insert into provincias values ('21','Huelva','01','Paula Pelegri Ela');
+insert into provincias values ('22','Huesca','02','Paula Pelegri Ela');
+insert into provincias values ('23','Jaén','01','Paula Pelegri Ela');
+insert into provincias values ('24','León','07','Paula Pelegri Ela');
+insert into provincias values ('25','Lleida','09','Paula Pelegri Ela');
+insert into provincias values ('26','La Rioja','17','Paula Pelegri Ela');
+insert into provincias values ('27','Lugo','12','Paula Pelegri Ela');
+insert into provincias values ('28','Madrid','13','Paula Pelegri Ela');
+insert into provincias values ('29','Málaga','01','Paula Pelegri Ela');
+insert into provincias values ('30','Murcia','14','Paula Pelegri Ela');
+insert into provincias values ('31','Navarra','15','Paula Pelegri Ela');
+insert into provincias values ('32','Orense','12','Paula Pelegri Ela');
+insert into provincias values ('33','Asturias','03','Paula Pelegri Ela');
+insert into provincias values ('34','Palencia','07','Paula Pelegri Ela');
+insert into provincias values ('35','Las Palmas','05','Paula Pelegri Ela');
+insert into provincias values ('36','Pontevedra','12','Paula Pelegri Ela');
+insert into provincias values ('37','Salamanca','07','Paula Pelegri Ela');
+insert into provincias values ('38','Santa Cruz de Tenerife','05','Paula Pelegri Ela');
+insert into provincias values ('39','Cantabria','06','Paula Pelegri Ela');
+insert into provincias values ('40','Segovia','07','Paula Pelegri Ela');
+insert into provincias values ('41','Sevilla','01','Paula Pelegri Ela');
+insert into provincias values ('42','Soria','07','Paula Pelegri Ela');
+insert into provincias values ('43','Tarragona','09','Paula Pelegri Ela');
+insert into provincias values ('44','Teruel','02','Paula Pelegri Ela');
+insert into provincias values ('45','Toledo','08','Paula Pelegri Ela');
+insert into provincias values ('46','Valencia','10','Paula Pelegri Ela');
+insert into provincias values ('47','Valladolid','07','Paula Pelegri Ela');
+insert into provincias values ('48','Vizcaya','16','Paula Pelegri Ela');
+insert into provincias values ('49','Zamora','07','Paula Pelegri Ela');
+insert into provincias values ('50','Zaragoza','02','Paula Pelegri Ela');
+insert into provincias values ('51','Ceuta','18','Paula Pelegri Ela');
+insert into provincias values ('52','Melilla','19','Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla clientes */
+
+insert into clientes values ('35641243Y','Ana','Sanchez Paz','2001-12-03','09','Briviesca','5','Burgos', 'Paula Pelegri Ela');
+insert into clientes values ('12341554F','Manuel','Martín Flores','1998-01-22','28','Gran Via','5','Madrid', 'Paula Pelegri Ela');
+insert into clientes values ('32755332C','Carmen','Fernánez Castillo','1996-07-12','28','Alcalá','7','Madrid', 'Paula Pelegri Ela');
+insert into clientes values ('12986314P','Pablo','Paz Santos','1990-11-11','08','Del mar','13','Badalona', 'Paula Pelegri Ela');
+insert into clientes values ('44654312L','Cristina','López Solis','1997-03-23','28','Avda de la Hispanidad','4','Alcobendas', 'Paula Pelegri Ela');
+insert into clientes values ('11543123K','Jose','García Soler','2003-05-16','46','Benicanena','24','Gandía', 'Paula Pelegri Ela');
+insert into clientes values ('25423167W','Mariano','Costa García','2004-08-24','27','García Dóriga','1','Vivero', 'Paula Pelegri Ela');
+insert into clientes values ('40761234J','Pedro','Rodríguez Gómez','1993-06-17','28','Porto Cristo','9','Alcorcón', 'Paula Pelegri Ela');
+insert into clientes values ('25125733G','Rosario','Soler Castro','2005-10-05','45','Tirso de Molina','15','Illescas', 'Paula Pelegri Ela');
+insert into clientes values ('33876432P','Felipe','Galvez Martín','2002-09-01','11','Virgen de la Palma','7','Cádiz', 'Paula Pelegri Ela');
+insert into clientes values ('15876124Y','Aurora','Delgado Santos','1992-12-05','10','Barriales','6','Plasencia', 'Paula Pelegri Ela');
+insert into clientes values ('12873412J','Emilio','Gomez Redondo','2002-04-28','43','Barbastre','5','Salou', 'Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla clientes_telefonos */
+
+insert into clientes_telefonos values ('35641243Y','611124345','Paula Pelegri Ela');
+insert into clientes_telefonos values ('35641243Y','916124566','Paula Pelegri Ela');
+insert into clientes_telefonos values ('35641243Y','644883245','Paula Pelegri Ela');
+insert into clientes_telefonos values ('12341554F','915646565','Paula Pelegri Ela');
+insert into clientes_telefonos values ('32755332C','634654321','Paula Pelegri Ela');
+insert into clientes_telefonos values ('12986314P','916056543','Paula Pelegri Ela');
+insert into clientes_telefonos values ('12986314P','916056544','Paula Pelegri Ela');
+insert into clientes_telefonos values ('44654312L','633124564','Paula Pelegri Ela');
+insert into clientes_telefonos values ('11543123K','640134543','Paula Pelegri Ela');
+insert into clientes_telefonos values ('25423167W','655123445','Paula Pelegri Ela');
+insert into clientes_telefonos values ('25423167W','655123446','Paula Pelegri Ela');
+insert into clientes_telefonos values ('40761234J','915643241','Paula Pelegri Ela');
+insert into clientes_telefonos values ('25125733G','916374391','Paula Pelegri Ela');
+insert into clientes_telefonos values ('33876432P','643876548','Paula Pelegri Ela');
+insert into clientes_telefonos values ('15876124Y','916971254','Paula Pelegri Ela');
+insert into clientes_telefonos values ('12873412J','654768535','Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla proveedores */
+
+insert into proveedores values ('B11256451','Mobiliario S.A','Benavente Nº 6','91456123412','Mollerusa', 'Paula Pelegri Ela');
+insert into proveedores values ('A98763565','IKREA S.L','Villanueva 12','675123476','Almonacid', 'Paula Pelegri Ela');
+insert into proveedores values ('B23617812','Mesas Julio','Albeola 16','91564123456','Isla Cristina', 'Paula Pelegri Ela');
+insert into proveedores values ('B54652387','Confrorrama','Requesta 14','644127755','Verin', 'Paula Pelegri Ela');
+insert into proveedores values ('A76548974','Maderfort S.A','Avda los Madrigales 18','655117623','Madrid', 'Paula Pelegri Ela');
+insert into proveedores values ('A54321098','Armarios Madrid S.L','Martin Fonseca 12','676112288','Muriedas', 'Paula Pelegri Ela');
+insert into proveedores values ('B12667799','Corte Wood S.A','Retamar 4','91543123412','Guarnizo', 'Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla proveedores_num_calle_central */
+
+insert into proveedores_num_calle_central values ('B11256451','2', 'Paula Pelegri Ela'),
+('B11256451','4', 'Paula Pelegri Ela'),
+('B11256451','5', 'Paula Pelegri Ela'),
+('A98763565','3', 'Paula Pelegri Ela'),
+('A98763565','4', 'Paula Pelegri Ela'),
+('B23617812','2', 'Paula Pelegri Ela'),
+('B54652387','1', 'Paula Pelegri Ela'),
+('A76548974','6', 'Paula Pelegri Ela'),
+('A54321098','7', 'Paula Pelegri Ela'),
+('A54321098','9', 'Paula Pelegri Ela'),
+('B12667799','14', 'Paula Pelegri Ela');
+
+/* Insertamos registros en la tabla muebles */
+
+insert into muebles values ('1','Armario Pino 12-15','1450','A54321098','12341554F', 'Paula Pelegri Ela');
+insert into muebles values ('2','Mesa caoba 12R','2314','B23617812','12986314P', 'Paula Pelegri Ela');
+insert into muebles values ('3','Armario Ropero Vizancio','4320','A54321098','12873412J', 'Paula Pelegri Ela');
+insert into muebles values ('4','Silla Luis XV','3700','A76548974','33876432P', 'Paula Pelegri Ela');
+insert into muebles values ('5','Sinfonier Pino','780','B54652387','25125733G', 'Paula Pelegri Ela');
+insert into muebles values ('6','Canape Rilo Negro','1860','B12667799','44654312L', 'Paula Pelegri Ela');
+insert into muebles values ('7','Lampara Roseta','145','A54321098','25423167W', 'Paula Pelegri Ela');
+insert into muebles values ('8','Cajonera 5x4','245','B11256451','15876124Y', 'Paula Pelegri Ela');
+insert into muebles values ('9','Mesa ribon cerezo','1340','B23617812','32755332C', 'Paula Pelegri Ela');
+insert into muebles values ('10','Silla pino Dole','242','A76548974','11543123K', 'Paula Pelegri Ela');

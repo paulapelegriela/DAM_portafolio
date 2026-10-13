@@ -1,0 +1,16 @@
+/* Creación de la tabla temporal */
+
+create temporary table paises (
+codigo varchar(5) primary key not null,
+nombre varchar(50) not null,
+numero_habitantes int not null,
+capital varchar(50) not null,
+fecha_fundacion date not null,
+salario_medio double not null,
+bandera blob,
+PPE varchar(50) not null);
+
+/* Sentencia SQL que permite visualizar sólo el nombre y los datos no numéricos de todos los países */
+
+select nombre, capital, fecha_fundacion, bandera
+from tb_paises;

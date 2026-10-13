@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<supermercado>
+
+    <producto cod="001">
+        <nombre>Leche</nombre>
+        <precio>1.50</precio>
+        <cantidad>4</cantidad>
+    </producto>
+
+    <producto cod="002">
+        <nombre>Pan</nombre>
+        <precio>0.80</precio>
+        <cantidad>2</cantidad>
+    </producto>
+
+    <producto cod="003">
+        <nombre>Huevos</nombre>
+        <precio>2.50</precio>
+        <cantidad>12</cantidad>
+    </producto>
+</supermercado>

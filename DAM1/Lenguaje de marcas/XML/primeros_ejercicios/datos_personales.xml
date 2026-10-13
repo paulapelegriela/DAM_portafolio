@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos_personales>
+    <nombre>Paula</nombre>
+    <primer_apellido>Pelegri</primer_apellido>
+    <segundo_apellido>Ela</segundo_apellido>
+    <edad>18</edad>
+    <dni>48374856U</dni>
+    <telefono>642985042</telefono>
+    <correo_electronico>ppe006@alu.medac.es</correo_electronico>
+    <direccion>
+        <calle>Calle Santa Eulalia</calle>
+        <numero>13</numero>
+        <ciudad>Barcelona</ciudad>
+        <codigo_postal>85003</codigo_postal>
+    </direccion>
+</datos_personales>

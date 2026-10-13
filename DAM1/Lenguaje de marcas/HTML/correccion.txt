@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>html con estilos</title>
+        <link ref="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <p id="patata">Hola</p>
+        <div class="prueba">
+            <p class="patata">Viva las vegas</p>
+        </div>
+    </body>
+</html>

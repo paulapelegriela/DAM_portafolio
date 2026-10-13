@@ -1,0 +1,64 @@
+<!ELEMENT parque (zonas, atracciones, visitantes, empleados, restaurantes, eventos, entradas, horarios, incidencias)>
+<!ATTLIST parque nombre CDATA #REQUIRED ciudad CDATA #IMPLIED apertura CDATA #REQUIRED>
+<!ELEMENT zonas (zona+)>
+<!ELEMENT zona (descripcion, atraccionRef*, restauranteRef*, empleadoRef*)>
+<!ATTLIST zona id ID #REQUIRED nombre CDATA #REQUIRED tematica CDATA #IMPLIED estado (abierta|cerrada|mantenimiento) "abierta">
+<!ELEMENT descripcion (#PCDATA)> <!ELEMENT atracciones (atraccion+)>
+<!ELEMENT atraccion (nombre, tipo, alturaMinima, capacidad, estado, tiempoEspera, premios?)>
+<!ATTLIST atraccion id ID #REQUIRED zona IDREF #REQUIRED intensidad (baja|media|alta|extrema) #IMPLIED>
+<!ELEMENT nombre (#PCDATA)> <!ELEMENT tipo (#PCDATA)> <!ELEMENT alturaMinima (#PCDATA)>
+<!ELEMENT capacidad (#PCDATA)> <!ELEMENT estado (#PCDATA)>
+<!ELEMENT tiempoEspera (#PCDATA)> <!ELEMENT premios (premio+)> <!ELEMENT premio (#PCDATA)>
+<!ELEMENT visitantes (visitante+)>
+<!ELEMENT visitante (nombre, edad, entradaAsignada, atraccionesFavoritas?, acompanantes?)>
+<!ATTLIST visitante id ID #REQUIRED vip (si|no) "no" grupo CDATA #IMPLIED>
+<!ELEMENT edad (#PCDATA)> <!ELEMENT entradaAsignada (#PCDATA)>
+<!ELEMENT atraccionesFavoritas (favorita+)>
+<!ELEMENT favorita (#PCDATA)> <!ELEMENT acompanantes (acompanante*)>
+<!ELEMENT acompanante (#PCDATA)> <!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, puesto, turno, salario, zonaAsignada)>
+<!ATTLIST empleado id ID #REQUIRED antiguedad CDATA #IMPLIED contrato (temporal|indefinido|practicas) #REQUIRED>
+<!ELEMENT puesto (#PCDATA)> <!ELEMENT turno (#PCDATA)>
+<!ELEMENT salario (#PCDATA)> <!ELEMENT zonaAsignada (#PCDATA)>
+<!ELEMENT restaurantes (restaurante+)>
+<!ELEMENT restaurante (nombre, especialidad, aforo, menu?)>
+<!ATTLIST restaurante id ID #REQUIRED zona IDREF #IMPLIED abierto (si|no) "si">
+<!ELEMENT especialidad (#PCDATA)> <!ELEMENT aforo (#PCDATA)> <!ELEMENT menu (producto+)>
+<!ELEMENT producto (nombre, precio, alergenos?)>
+<!ATTLIST producto id ID #IMPLIED categoria (comida|bebida|postre) #REQUIRED>
+<!ELEMENT precio (#PCDATA)> <!ELEMENT alergenos (#PCDATA)> <!ELEMENT eventos (evento+)>
+<!ELEMENT evento (titulo, fecha, hora, ubicacion, aforoMaximo?)>
+<!ATTLIST evento id ID #REQUIRED tipo (desfile|show|concierto|infantil) #IMPLIED>
+<!ELEMENT titulo (#PCDATA)> <!ELEMENT fecha (#PCDATA)> <!ELEMENT hora (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)> <!ELEMENT aforoMaximo (#PCDATA)> <!ELEMENT entradas (entrada+)>
+<!ELEMENT entrada (tipoEntrada, precio, fechaCompra, visitanteRef?)>
+<!ATTLIST entrada id ID #REQUIRED usada (si|no) "no" descuento CDATA #IMPLIED>
+<!ELEMENT tipoEntrada (#PCDATA)> <!ELEMENT fechaCompra (#PCDATA)>
+<!ELEMENT visitanteRef (#PCDATA)> <!ELEMENT horarios (horario+)>
+<!ELEMENT horario (dia, apertura, cierre)>
+<!ATTLIST horario id ID #REQUIRED temporada (alta|media|baja) #REQUIRED>
+<!ELEMENT dia (#PCDATA)> <!ELEMENT apertura (#PCDATA)>
+<!ELEMENT cierre (#PCDATA)> <!ELEMENT incidencias (incidencia+)>
+<!ELEMENT incidencia (fecha, descripcion, gravedad, zonaRef?)>
+<!ATTLIST incidencia id ID #REQUIRED resuelta (si|no) "no">
+<!ELEMENT gravedad (#PCDATA)> <!ELEMENT zonaRef (#PCDATA)>
+<!ELEMENT atraccionRef (#PCDATA)> <!ELEMENT restauranteRef (#PCDATA)>
+<!ELEMENT empleadoRef (#PCDATA)> <!ELEMENT misterioso (#PCDATA)>
+<!ELEMENT zona-extra (#PCDATA)> <!ELEMENT 123dato (#PCDATA)>
+<!ATTLIST atraccion id2 ID #REQUIRED> <!ATTLIST visitante id ID #IMPLIED>
+<!ELEMENT menu (producto+, bebidaEspecial)> <!ELEMENT bebidaEspecial EMPTY>
+<!ELEMENT empleado (nombre, puesto, puesto, turno)>
+<!ELEMENT restaurante (nombre|especialidad|aforo)>
+<!ELEMENT evento ANY> <!ENTITY promo "2x1 en entradas de tarde">
+<!ENTITY logo SYSTEM "logo_parque.png"> <!ENTITY sorpresa "Montaña & Rápida">
+<!ELEMENT datosSueltos (#PCDATA|nombre|tipo)*> <!ATTLIST producto precio CDATA #REQUIRED>
+<!ELEMENT apertura (#PCDATA|hora)> <!ELEMENT cierre (#PCDATA|hora)>
+<!ELEMENT zona (descripcion, atraccionRef+, restauranteRef*, empleadoRef*, horarioZona?)>
+<!ELEMENT horarioZona (apertura, cierre)> <!ATTLIST zona codigo ID #REQUIRED>
+<!ELEMENT atracciones (atraccion*, simulador?)> <!ELEMENT simulador (#PCDATA)>
+<!ENTITY invalida "Texto con < y > sin escapar"> <!ELEMENT nota (#CDATA)>
+<!ATTLIST incidencia prioridad (alta|media|baja|critica) #FIXED "media">
+<!ELEMENT prioridad (#PCDATA)> <!ELEMENT comentarios (#PCDATA)>
+<!ATTLIST horario id IDREF #REQUIRED>
+<!ELEMENT parque (zonas, atracciones, visitantes, empleados, restaurantes, eventos, entradas, horarios)>
+<!ELEMENT basura ()>

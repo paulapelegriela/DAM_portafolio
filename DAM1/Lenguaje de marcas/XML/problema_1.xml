@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos SYSTEM "problema_1.dtd">
+
+<pedidos>
+    <pedido id="p01">
+        <cliente>Marina Pérez</cliente>
+        <fecha>06/03/2026</fecha>
+
+        <productos>
+            <producto>
+                <nombre>Vestido de verano</nombre>
+                <cantidad>1</cantidad>
+                <precio_unitario>19.99</precio_unitario>
+            </producto>
+
+            <producto>
+                <nombre>pantalón vaquero</nombre>
+                <cantidad>2</cantidad>
+                <precio_unitario>25.99</precio_unitario>
+            </producto>
+
+            <producto>
+                <nombre>top azul</nombre>
+                <cantidad>1</cantidad>
+                <precio_unitario>9.95</precio_unitario>
+            </producto>
+        </productos>
+    </pedido>
+
+    <pedido id="p02">
+        <cliente>Juan Pérez</cliente>
+        <fecha>02/03/2026</fecha>
+
+        <productos>
+            <producto>
+                <nombre>Teclado mecánico</nombre>
+                <cantidad>1</cantidad>
+                <precio_unitario>89.99</precio_unitario>
+            </producto>
+
+            <producto>
+                <nombre>Ratón gaming</nombre>
+                <cantidad>1</cantidad>
+                <precio_unitario>35.99</precio_unitario>
+            </producto>
+
+            <producto>
+                <nombre>alfombrilla XL</nombre>
+                <cantidad>1</cantidad>
+                <precio_unitario>19.95</precio_unitario>
+            </producto>
+        </productos>
+    </pedido>
+</pedidos>

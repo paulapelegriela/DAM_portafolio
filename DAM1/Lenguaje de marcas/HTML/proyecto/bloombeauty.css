@@ -1,0 +1,70 @@
+.encabezado {
+    background-color: rgb(97, 17, 95); /*color de fondo del encabezado*/
+    display: flex;           /*usa flexbox*/
+    justify-content: center; /*centra los enlaces*/
+    gap: 20px;               /*espacio entre enlaces*/
+}
+
+a {
+    color: palevioletred; /*color inicial del enlace*/
+    text-decoration: none; /*quita el subrayado*/
+}
+a:hover {
+    color: white; /*cambia a blanco al pasar el ratón*/
+}
+
+.a {
+    background-color: rgb(224, 16, 86); /*fondo rosa*/
+    font: 200% serif; /*tamaño y tipo de texto*/
+}
+
+.b {
+    color: white; /*texto en color blanco*/
+}
+
+.i {
+    background-image: url("imagenes/banner.png"); /*imagen del banner*/
+    background-size: cover;     /*cubre todo el banner*/
+    background-position: center; /*centrada*/
+    width: 100%; /*ancho completo*/
+    height: 400px; /*altura fija*/
+    display: flex; 
+    justify-content: flex-end; /*contenido abajo*/
+    align-items: flex-end; 
+    flex-direction: column; /*en forma de columna*/
+    align-items: center; /*centra lo de dentro horizontalmente*/
+}
+
+.boton {    
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra el botón*/
+}
+
+button {
+    background-color: black; /*fondo negro*/
+    color: white; /*texto blanco*/
+    border: none; /*sin borde*/
+    padding: 15px 40px; /*tamaño del botón*/
+}
+
+.fondo {
+    background-image: url("imagenes/brochas.png");
+    background-repeat: repeat; /*se repite la imagen*/
+    background-size: 300px; /*tamaño de cada repetición*/
+    color: white; /*texto blanco*/
+    padding: 60px 0; /*espacio arriba y abajo*/
+}
+
+.blanco {
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra el contenido*/
+}
+.blanco button {
+    background-color: white; /*botón blanco*/
+    color: black; /*texto negro*/
+}
+
+.c {
+    display: flex; /*flexbox*/
+    justify-content: center; /*centra contenido*/
+}

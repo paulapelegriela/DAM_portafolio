@@ -1,0 +1,12 @@
+<resources>
+    <!-- Este xml sirve para quitar el hardcode en los textos de los componentes -->
+    <string name="app_name">A031MiPrimeraApp</string>
+    <string name="txtNum1">Primer Operando</string>
+    <string name="txtNum2">Segundo Operando</string>
+    <string name="buttonSumar">+</string>
+    <string name="buttonRestar">-</string>
+    <string name="buttonMultiplicar">x</string>
+    <string name="buttonDividir">/</string>
+    <string name="txtResultado">Resultado</string>
+    <string name="buttonLimpiar">Limpiar</string>
+</resources>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Personal de viajes</title>
+	<meta name="author" content="José García">
+	<meta name="description" content="Blog personal sobre viajes, aventuras y fotografía">
+	<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+<header>
+	<h1>Blog de José: Aventuras por el mundo</h1>
+	<p>Bienvenidos a mi bitácora de viajes y experiencias alrededor del globo!</p>
+	<nav>
+		<ul>
+			<li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="about.html">Sobre mi</a></li>
+			<li><a href="galeria.html">Galería</a></li>
+			<li><a href="contacto.html" target="_blank">Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+<section id="introduccion">
+	<h2>Últimos viajes</h2>
+	<p>En esta sección comparto mis aventuras recientes. He visitado desde <strong>Islandia</strong></p>
+	<img src="viajel.jpg" alt="Foto de Islandia" width="400px">
+	<p>Si te gustan los paisajes naturales, no te pierdas mi <a href="galeria.html" title="fotos">Galería</a></p>
+</section>
+
+<section id="entradas">
+	<h2>Entradas del blog</h2>
+	
+	<article>
+		<h3>Descubriendo Islandia</h3>
+		<p><time datetime="2025-02-10">10 Febrero 2025</time></p>
+		<p>Islandia es un país lleno de contrastes. Sus volcanes, glaciares y géiseres lo hacen</p>
+		<img src="islandia.jpg" alt="Volcán islandés" width="350">
+		<p>He preparado una lista de consejos para viajar barato:</p>
+		<ul>
+			<li>Evita temporada alta</li>
+			<li>Reserva alojamientos con antelación</li>
+			<li>Alquila coche compartido</li>
+		</ul>
+		<p>Para leer más, haz clic <a href="Islandia.html" target="_blank">aquí</a></p>
+	</article>
+
+	<article>
+		<h3>Fotografía de viaje</h3>
+		<p>Siempre llevo mi cámara conmigo para capturar momentos únicos.</p>
+		<img src="camara.jpg" alt="Cámara fotográfica">
+		<figure>
+			<img src="paisaje.jpg" alt="">
+			<figcaption>Foto tomada en el desierto del Sáhara</figcaption>
+		</figure>
+		<p>Recuerda que la luz natural es tu mejor aliada!</p>
+		<blockquote>"La fotografía es la historia que no puedo poner en palabras." - Destin Sparks</blockquote>
+	</article>
+</section>
+
+<aside>
+	<h3>Sobre el autor</h3>
+	<img src="autor.jpg" alt="Foto del autor">
+	<p>Me llamo José y llevo viajando desde hace 10 años. Me apasiona la fotografía y la gastronomía</p>
+	<ul>
+		<li><a href="https://instagram.com/joseviajero" target="_blank">Instagram</a></li>
+		<li><a href="https://twitter.com/joseviajero" target="_blank">Twitter</a></li>
+	</ul>
+</aside>
+
+<section id="comentarios">
+	<h2>Comentarios</h2>
+	<form action="comentarios.php" method="POST">
+		<label for="nombre">Nombre:</label> <br>
+		<input type="text" id="nombre" name="nombre"><br>
+		<label for="comentario">Comentario:</label><br>
+		<textarea id="comentario" name="comentario" rows="4" cols="40"></textarea>
+		<br>
+		<input type="submit" value="Enviar comentario">
+	</form>
+</section>
+
+<section id="tabla-viajes">
+	<h2>Resumen de viajes recientes</h2>
+	<table border="1">
+		<tr>
+			<th>Destino</th><th>País</th><th>Año</th><th>Duración</th>
+		</tr>
+		<tr>
+			<td>Reikiavik</td><td>Islandia</td><td>2025</td><td>10 días</td>
+		</tr>
+		<tr>
+			<td>Marrakech</td><td>Marruecos</td><td>2024</td><td>8 días</td>
+		</tr>
+		<tr>
+			<td>Lisboa</td><td>Portugal</td><td>2023</td><td>5 días</td>
+		</tr>
+	</table>
+</section>
+
+<footer>
+	<p>&copy 2025 Blog de José</p>
+	<p>Contacto: <a href="mailto:jose@blogviajes.com" title="Correo personal">Enviar Correo</a></p>
+	<p>Visita mi <a href="https://www.blogviajes.com">sitio principal</a></p>
+	<address>Calle Falsa 123, Madrid</address>
+</footer>	
+</body>
+</html>	
